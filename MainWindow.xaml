@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fashionApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="728" Width="1280"
         Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="newDG" HorizontalAlignment="Left" Height="352" Margin="10,58,0,0" VerticalAlignment="Top" Width="774"/>
+        <DataGrid x:Name="newDG" HorizontalAlignment="Left" Height="257" Margin="44,170,0,0" VerticalAlignment="Top" Width="249"/>
+        <ScrollViewer x:Name="scrollBox1" HorizontalAlignment="Left" Height="678" Margin="337,10,0,0" VerticalAlignment="Top" Width="927">
+            <Grid x:Name="DataGrid1" Height="auto" Width="850"/>
+        </ScrollViewer>
 
     </Grid>
 </Window>
