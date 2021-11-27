@@ -10,7 +10,18 @@
     <Grid>
         <DataGrid x:Name="newDG" HorizontalAlignment="Left" Height="257" Margin="44,170,0,0" VerticalAlignment="Top" Width="249"/>
         <ScrollViewer x:Name="scrollBox1" HorizontalAlignment="Left" Height="678" Margin="337,10,0,0" VerticalAlignment="Top" Width="927">
-            <Grid x:Name="DataGrid1" Height="auto" Width="850"/>
+            <Grid x:Name="DataGrid1" Height="auto" Width="850">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="71*"/>
+                    <ColumnDefinition Width="779*"/>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="325" Stroke="Black" VerticalAlignment="Top" Width="204" Grid.ColumnSpan="2"/>
+                <Image HorizontalAlignment="Left" Height="242" Margin="4,10,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+                <Label Content="POLO Fayur" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2" FontSize="16"/>
+                <Label Content="LKR. 5000" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top"/>
+
+            </Grid>
         </ScrollViewer>
 
     </Grid>

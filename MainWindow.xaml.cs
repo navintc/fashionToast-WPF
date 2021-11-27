@@ -341,24 +341,6 @@ namespace fashionApp2
                     "Margin='3' Width='80' Height='25' Content='Save' />" +
 
 
-
-
-
-
-                "<TextBlock Text='First Name' Height='19' Margin='0,7,31,4' />" +
-                "<TextBox Margin='3' Grid.Row='4' Grid.Column='3' />" +
-
-                "<TextBlock Text='Last Name' Margin='0,7,6,3' Grid.Row='5' Height='20' />" +
-                "<TextBox Margin='3' Grid.Row='1' Grid.Column='1' />" +
-
-                "<TextBlock Text='Date of Birth' Grid.Row='4' Margin='0,9,0,0' Height='21' />" +
-
-
-                "<Button Grid.Row='8' Grid.Column='5' " +
-                    "HorizontalAlignment='Right' VerticalAlignment='Top' " +
-                    "Margin='3' Width='80' Height='25' Content='Save' />" +
-
-
             "</Grid>";
 
 
