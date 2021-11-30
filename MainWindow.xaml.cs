@@ -426,6 +426,7 @@ namespace fashionApp2
             lblItemName1.Content = "-";
             lblItemCat1.Content = " - ";
             lblItemPrice1.Content = "LKR. - ";
+
             eclColour1.Fill = new SolidColorBrush(Colors.Gray);
 
             lblItemName2.Content = "-";
@@ -507,7 +508,73 @@ namespace fashionApp2
 
 
 
+        private void rectColorChanger(string a)
+        {
+            switch (a){
+                case "Red":
+                    rectBla.Stroke =  new SolidColorBrush(Colors.White);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.White);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.White);
+                    rectRed.Stroke = new SolidColorBrush(Colors.Black);
+                    rectGre.Stroke = new SolidColorBrush(Colors.White);
+                    rectYel.Stroke = new SolidColorBrush(Colors.White);
+                    break;
 
+                case "Blue":
+                    rectBla.Stroke = new SolidColorBrush(Colors.White);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.White);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.Black);
+                    rectRed.Stroke = new SolidColorBrush(Colors.White);
+                    rectGre.Stroke = new SolidColorBrush(Colors.White);
+                    rectYel.Stroke = new SolidColorBrush(Colors.White);
+                    break;
+
+                case "Green":
+                    rectBla.Stroke = new SolidColorBrush(Colors.White);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.White);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.White);
+                    rectRed.Stroke = new SolidColorBrush(Colors.White);
+                    rectGre.Stroke = new SolidColorBrush(Colors.Black);
+                    rectYel.Stroke = new SolidColorBrush(Colors.White);
+                    break;
+
+                case "Yellow":
+                    rectBla.Stroke = new SolidColorBrush(Colors.White);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.White);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.White);
+                    rectRed.Stroke = new SolidColorBrush(Colors.White);
+                    rectGre.Stroke = new SolidColorBrush(Colors.White);
+                    rectYel.Stroke = new SolidColorBrush(Colors.Black);
+                    break;
+
+                case "Black":
+                    rectBla.Stroke = new SolidColorBrush(Colors.Black);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.White);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.White);
+                    rectRed.Stroke = new SolidColorBrush(Colors.White);
+                    rectGre.Stroke = new SolidColorBrush(Colors.White);
+                    rectYel.Stroke = new SolidColorBrush(Colors.White);
+                    break;
+
+                case "White":
+                    rectBla.Stroke = new SolidColorBrush(Colors.White);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.Black);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.White);
+                    rectRed.Stroke = new SolidColorBrush(Colors.White);
+                    rectGre.Stroke = new SolidColorBrush(Colors.White);
+                    rectYel.Stroke = new SolidColorBrush(Colors.White);
+                    break;
+
+                case "All":
+                    rectBla.Stroke = new SolidColorBrush(Colors.Black);
+                    rectWhi.Stroke = new SolidColorBrush(Colors.Black);
+                    rectBlu.Stroke = new SolidColorBrush(Colors.Black);
+                    rectRed.Stroke = new SolidColorBrush(Colors.Black);
+                    rectGre.Stroke = new SolidColorBrush(Colors.Black);
+                    rectYel.Stroke = new SolidColorBrush(Colors.Black);
+                    break;
+            }
+        }
 
         // Clicking Color Bottons
 
@@ -519,34 +586,40 @@ namespace fashionApp2
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Rathu");
             selectedColor = "Red";
+            rectColorChanger("Red");
         }
 
         private void ButtonGre_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Kola");
             selectedColor = "Green";
+            rectColorChanger("Green");
         }
         private void ButtonBlu_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Nil");
             selectedColor = "Blue";
+            rectColorChanger("Blue");
         }
         private void ButtonBla_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Kalu");
             selectedColor = "Black";
+            rectColorChanger("Black");
         }
 
         private void ButtonWhi_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Sudu");
             selectedColor = "White";
+            rectColorChanger("White");
         }
 
         private void ButtonYel_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Ebuwa Kaha");
             selectedColor = "Yellow";
+            rectColorChanger("Yellow");
         }
 
 
@@ -557,6 +630,12 @@ namespace fashionApp2
         private void ButtonReset_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(comboStyle.Text);
+            rectColorChanger("All");
+
+            radioAll.IsChecked = true;
+            selectedColor = null;
+            comboStyle.Text = "";
+            sqlQueryLord("");
         }
 
         private void ButtonFilter_Click(object sender, RoutedEventArgs e)
@@ -588,6 +667,11 @@ namespace fashionApp2
             }
 
             sqlQueryLord("where (gender='" + selectedGender + "') " + styleString +  colorString + ";");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
