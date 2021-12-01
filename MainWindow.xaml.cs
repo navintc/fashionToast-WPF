@@ -104,7 +104,7 @@ namespace fashionApp2
         {
             //System.Diagnostics.Debug.WriteLine(allRecords[0].DatName);
 
-            
+
 
 
             /*
@@ -132,13 +132,18 @@ namespace fashionApp2
 
             // If දාලා කෑලි කඩහන් array එකේ size එක බලලා.. මුලින්ම ඔක්කොම අලු කරන්න function එක්කුත් දාන්න.
 
-            
+
+            System.Windows.Controls.Image myImage = new System.Windows.Controls.Image();
 
             if (allRecords.Count() > 0)
             {
                 lblItemName1.Content = allRecords[0].DatName;
                 lblItemCat1.Content = allRecords[0].DatGender + " | " + allRecords[0].DatStyle;
                 lblItemPrice1.Content = "LKR. " + allRecords[0].DatPrice;
+                
+                imgFa1.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[0].DatItemID + ".jpg"));
+                rect1.Visibility = Visibility.Visible;
+
 
                 if (allRecords[0].DatColor == "Red")
                 {
@@ -177,6 +182,9 @@ namespace fashionApp2
                 lblItemCat2.Content = allRecords[1].DatGender + " | " + allRecords[1].DatStyle;
                 lblItemPrice2.Content = "LKR. " + allRecords[1].DatPrice;
 
+                imgFa2.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[1].DatItemID + ".jpg"));
+                rect2.Visibility = Visibility.Visible;
+
                 if (allRecords[1].DatColor == "Red")
                 {
                     eclColour2.Fill = new SolidColorBrush(Colors.Red);
@@ -213,6 +221,8 @@ namespace fashionApp2
                 lblItemCat3.Content = allRecords[2].DatGender + " | " + allRecords[2].DatStyle;
                 lblItemPrice3.Content = "LKR. " + allRecords[2].DatPrice;
 
+                imgFa3.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[2].DatItemID + ".jpg"));
+                rect3.Visibility = Visibility.Visible;
 
                 if (allRecords[2].DatColor == "Red")
                 {
@@ -251,6 +261,9 @@ namespace fashionApp2
                 lblItemCat4.Content = allRecords[3].DatGender + " | " + allRecords[3].DatStyle;
                 lblItemPrice4.Content = "LKR. " + allRecords[3].DatPrice;
 
+                imgFa4.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[3].DatItemID + ".jpg"));
+                rect4.Visibility = Visibility.Visible;
+
                 if (allRecords[3].DatColor == "Red")
                 {
                     eclColour4.Fill = new SolidColorBrush(Colors.Red);
@@ -288,6 +301,9 @@ namespace fashionApp2
                 lblItemCat5.Content = allRecords[4].DatGender + " | " + allRecords[4].DatStyle;
                 lblItemPrice5.Content = "LKR. " + allRecords[4].DatPrice;
 
+                imgFa5.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[4].DatItemID + ".jpg"));
+                rect5.Visibility = Visibility.Visible;
+
                 if (allRecords[4].DatColor == "Red")
                 {
                     eclColour5.Fill = new SolidColorBrush(Colors.Red);
@@ -324,6 +340,8 @@ namespace fashionApp2
                 lblItemCat6.Content = allRecords[5].DatGender + " | " + allRecords[5].DatStyle;
                 lblItemPrice6.Content = "LKR. " + allRecords[5].DatPrice;
 
+                imgFa6.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[5].DatItemID + ".jpg"));
+                rect6.Visibility = Visibility.Visible;
 
                 if (allRecords[5].DatColor == "Red")
                 {
@@ -358,6 +376,9 @@ namespace fashionApp2
                 lblItemCat7.Content = allRecords[6].DatGender + " | " + allRecords[6].DatStyle;
                 lblItemPrice7.Content = "LKR. " + allRecords[6].DatPrice;
 
+                imgFa7.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[6].DatItemID + ".jpg"));
+                rect7.Visibility = Visibility.Visible;
+
                 if (allRecords[6].DatColor == "Red")
                 {
                     eclColour7.Fill = new SolidColorBrush(Colors.Red);
@@ -391,6 +412,9 @@ namespace fashionApp2
                 lblItemCat8.Content = allRecords[7].DatGender + " | " + allRecords[7].DatStyle;
                 lblItemPrice8.Content = "LKR. " + allRecords[7].DatPrice;
 
+                imgFa8.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[7].DatItemID + ".jpg"));
+                rect8.Visibility = Visibility.Visible;
+
                 if (allRecords[7].DatColor == "Red")
                 {
                     eclColour8.Fill = new SolidColorBrush(Colors.Red);
@@ -423,47 +447,70 @@ namespace fashionApp2
 
         private void grayNuller()
         {
-            lblItemName1.Content = "-";
-            lblItemCat1.Content = " - ";
-            lblItemPrice1.Content = "LKR. - ";
+            lblItemName1.Content = "";
+            lblItemCat1.Content = "  ";
+            lblItemPrice1.Content = " ";
+            imgFa1.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour1.Fill = new SolidColorBrush(Colors.White);
+            eclColour1.Stroke = new SolidColorBrush(Colors.White);
+            rect1.Visibility = Visibility.Hidden;
 
-            eclColour1.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName2.Content = "";
+            lblItemCat2.Content = "  ";
+            lblItemPrice2.Content = " ";
+            imgFa2.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour2.Fill = new SolidColorBrush(Colors.White);
+            eclColour2.Stroke = new SolidColorBrush(Colors.White);
+            rect2.Visibility = Visibility.Hidden;
 
-            lblItemName2.Content = "-";
-            lblItemCat2.Content = " - ";
-            lblItemPrice2.Content = "LKR. - ";
-            eclColour2.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName3.Content = "";
+            lblItemCat3.Content = "  ";
+            lblItemPrice3.Content = "";
+            imgFa3.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour3.Fill = new SolidColorBrush(Colors.White);
+            eclColour3.Stroke = new SolidColorBrush(Colors.White);
+            rect3.Visibility = Visibility.Hidden;
 
-            lblItemName3.Content = "-";
-            lblItemCat3.Content = " - ";
-            lblItemPrice3.Content = "LKR. - ";
-            eclColour3.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName4.Content = "";
+            lblItemCat4.Content = "  ";
+            lblItemPrice4.Content = "";
+            imgFa4.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour4.Fill = new SolidColorBrush(Colors.White);
+            eclColour4.Stroke = new SolidColorBrush(Colors.White);
+            rect4.Visibility = Visibility.Hidden;
 
-            lblItemName4.Content = "-";
-            lblItemCat4.Content = " - ";
-            lblItemPrice4.Content = "LKR. - ";
-            eclColour4.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName5.Content = "";
+            lblItemCat5.Content = "  ";
+            lblItemPrice5.Content = "";
+            imgFa5.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour5.Fill = new SolidColorBrush(Colors.White);
+            eclColour5.Stroke = new SolidColorBrush(Colors.White);
+            rect5.Visibility = Visibility.Hidden;
 
-            lblItemName5.Content = "-";
-            lblItemCat5.Content = " - ";
-            lblItemPrice5.Content = "LKR. - ";
-            eclColour5.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName6.Content = "";
+            lblItemCat6.Content = "  ";
+            lblItemPrice6.Content = "";
+            imgFa6.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour6.Fill = new SolidColorBrush(Colors.White);
+            eclColour6.Stroke = new SolidColorBrush(Colors.White);
+            rect6.Visibility = Visibility.Hidden;
 
-            lblItemName6.Content = "-";
-            lblItemCat6.Content = " - ";
-            lblItemPrice6.Content = "LKR. - ";
-            eclColour6.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName7.Content = "";
+            lblItemCat7.Content = "  ";
+            lblItemPrice7.Content = " ";
+            imgFa7.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour7.Fill = new SolidColorBrush(Colors.White);
+            eclColour7.Stroke = new SolidColorBrush(Colors.White);
+            rect7.Visibility = Visibility.Hidden;
 
-            lblItemName7.Content = "-";
-            lblItemCat7.Content = " - ";
-            lblItemPrice7.Content = "LKR. - ";
-            eclColour7.Fill = new SolidColorBrush(Colors.Gray);
 
-            
-            lblItemName8.Content = "-";
-            lblItemCat8.Content = " - ";
-            lblItemPrice8.Content = "LKR. - ";
-            eclColour8.Fill = new SolidColorBrush(Colors.Gray);
+            lblItemName8.Content = "";
+            lblItemCat8.Content = "  ";
+            lblItemPrice8.Content = " ";
+            imgFa8.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/logoGray.png"));
+            eclColour8.Fill = new SolidColorBrush(Colors.White);
+            eclColour8.Stroke = new SolidColorBrush(Colors.White);
+            rect8.Visibility = Visibility.Hidden;
         }
         //useless ATM
         private void fucking()

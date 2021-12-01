@@ -18,7 +18,7 @@
 
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="2.4,14,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa1" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName1" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice1" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -29,7 +29,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="228.4,14,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa2" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName2" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice2" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -40,7 +40,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="454.4,14,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa3" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName3" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice3" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -51,7 +51,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="680.4,14,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa4" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName4" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice4" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -73,7 +73,7 @@
 
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="2.4,322,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa5" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName5" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice5" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -84,7 +84,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="228.4,322,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa6" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName6" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice6" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -95,7 +95,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="454.4,322,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa7" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName7" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice7" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
@@ -106,7 +106,7 @@
                 </Grid>
 
                 <Grid HorizontalAlignment="Left" Height="290" Margin="680.4,322,0,0" VerticalAlignment="Top" Width="221" Grid.Column="1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
+                    <Rectangle x:Name="rect8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="285" Stroke="Black" VerticalAlignment="Top" Width="204" Margin="10,0,0,0"/>
                     <Image x:Name="imgFa8" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName8" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice8" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
