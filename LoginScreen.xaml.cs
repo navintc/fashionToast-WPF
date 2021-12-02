@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace fashionApp2
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for LoginScreen.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class LoginScreen : Window
     {
-        public Page1()
+        public LoginScreen()
         {
             InitializeComponent();
         }
