@@ -16,17 +16,7 @@
     <Border Background="	#709c63" CornerRadius="30" Margin="30">
         
         <StackPanel Margin="40">
-           
-
-
-
-
-
-
-
-
-
-            <Label Content=" Login Details" 
+           <Label Content=" Login Details" 
                    Foreground="Black" 
                    FontSize="28" 
                    FontWeight="Bold" 
