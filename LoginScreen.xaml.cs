@@ -24,5 +24,25 @@ namespace fashionApp2
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            
+            
+                if (txtpw.Password == ("password") && txtUserName.Text == ("customer"))
+                {
+                    MainWindow m = new MainWindow();
+                    m.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Password or username is incorrecr! Please try again!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            
+
+           
+            
+        }
     }
 }
