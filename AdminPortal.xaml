@@ -1,0 +1,81 @@
+﻿<Window x:Class="fashionApp2.AdminPortal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fashionApp2"
+        mc:Ignorable="d"
+        Title="AdminPortal" Height="490" Width="800">
+   
+   
+    <Grid>
+        <Grid>
+            <Line
+     X1="779" Y1="60"
+     X2="10" Y2="60"
+     Stroke="Black"
+     StrokeThickness="4"/>
+            <Button Content="ADMIN ACCOUNT" Background="White" BorderThickness="2" BorderBrush="Orange" FontWeight="Bold"
+                 FontSize="16" HorizontalAlignment="Left" Margin="620,22,0,0" VerticalAlignment="Top" Width="150"/>
+        </Grid>
+        <Label Content="Item ID " HorizontalAlignment="Left"  Margin="38,113,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Item Name" HorizontalAlignment="Left" Margin="38,171,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="38,229,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="38,287,0,0" VerticalAlignment="Top" FontSize="20"/>
+        
+        <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="160,120,0,0" 
+                 TextWrapping="Wrap" 
+                 Name="txtItemID" 
+                 VerticalAlignment="Top" 
+                 Width="250"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+        <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="160,178,0,0" 
+                 TextWrapping="Wrap" 
+                 Name="txtItemName"
+                 VerticalAlignment="Top" 
+                 Width="250"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+        <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="160,236,0,0" 
+                 TextWrapping="Wrap" 
+                 Name="txtPrice" 
+                 VerticalAlignment="Top" 
+                 Width="250"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+        <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="160,294,0,0" 
+                 TextWrapping="Wrap" 
+                 Name="txtQty"
+                 VerticalAlignment="Top" 
+                 Width="250"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+        
+        <Button Content="ADD" FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="38,341,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button Content="UPDATE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="185,341,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.801,1.393"/>
+        <Button Content="DELETE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="339,341,0,0" VerticalAlignment="Top" Width="100"/>
+        
+
+        <Button Content="LOGOUT"  FontSize="20"  
+              Foreground="White" FontWeight="ExtraBold"
+               Background="Black"  HorizontalAlignment="Left" 
+                Margin="636,386,0,0" VerticalAlignment="Top" Width="120" Height="50"
+                RenderTransformOrigin="3.021,3.743"/>
+
+
+
+
+
+
+
+    </Grid>
+</Window>
