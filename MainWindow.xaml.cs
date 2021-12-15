@@ -20,7 +20,7 @@ using fashionApp2.Classes;
 using System.IO;
 using System.Xml;
 using System.Windows.Markup;
-
+using System.Collections;
 
 namespace fashionApp2
 {
@@ -42,9 +42,13 @@ namespace fashionApp2
     public partial class MainWindow : Window
     {
 
+        public ArrayList cart = new ArrayList();
+        public static SQLHolder[] allRecords = null;
+
+
         public string selectedColor = null;
         public string selectedSize = null;
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -82,7 +86,7 @@ namespace fashionApp2
 
             //Recieved data will be appended into the allRecords array. you can access each data by (allRecords[0].Col2)
 
-            SQLHolder[] allRecords = null;
+            
 
             using (var reader = SQLServerConnections.cmd.ExecuteReader())
             {
@@ -143,6 +147,7 @@ namespace fashionApp2
                 
                 imgFa1.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[0].DatItemID + ".jpg"));
                 rect1.Visibility = Visibility.Visible;
+                btnAdd1.Visibility = Visibility.Visible;
 
 
                 if (allRecords[0].DatColor == "Red")
@@ -184,6 +189,7 @@ namespace fashionApp2
 
                 imgFa2.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[1].DatItemID + ".jpg"));
                 rect2.Visibility = Visibility.Visible;
+                btnAdd2.Visibility = Visibility.Visible;
 
                 if (allRecords[1].DatColor == "Red")
                 {
@@ -223,6 +229,7 @@ namespace fashionApp2
 
                 imgFa3.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[2].DatItemID + ".jpg"));
                 rect3.Visibility = Visibility.Visible;
+                btnAdd3.Visibility = Visibility.Visible;
 
                 if (allRecords[2].DatColor == "Red")
                 {
@@ -263,6 +270,7 @@ namespace fashionApp2
 
                 imgFa4.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[3].DatItemID + ".jpg"));
                 rect4.Visibility = Visibility.Visible;
+                btnAdd4.Visibility = Visibility.Visible;
 
                 if (allRecords[3].DatColor == "Red")
                 {
@@ -303,6 +311,7 @@ namespace fashionApp2
 
                 imgFa5.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[4].DatItemID + ".jpg"));
                 rect5.Visibility = Visibility.Visible;
+                btnAdd5.Visibility = Visibility.Visible;
 
                 if (allRecords[4].DatColor == "Red")
                 {
@@ -342,6 +351,7 @@ namespace fashionApp2
 
                 imgFa6.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[5].DatItemID + ".jpg"));
                 rect6.Visibility = Visibility.Visible;
+                btnAdd6.Visibility = Visibility.Visible;
 
                 if (allRecords[5].DatColor == "Red")
                 {
@@ -378,6 +388,7 @@ namespace fashionApp2
 
                 imgFa7.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[6].DatItemID + ".jpg"));
                 rect7.Visibility = Visibility.Visible;
+                btnAdd7.Visibility = Visibility.Visible;
 
                 if (allRecords[6].DatColor == "Red")
                 {
@@ -406,6 +417,7 @@ namespace fashionApp2
             }
 
             // --------
+
             if (allRecords.Count() > 7)
             {
                 lblItemName8.Content = allRecords[7].DatName;
@@ -414,6 +426,7 @@ namespace fashionApp2
 
                 imgFa8.Source = new BitmapImage(new Uri("pack://siteoforigin:,,,/img/" + allRecords[7].DatItemID + ".jpg"));
                 rect8.Visibility = Visibility.Visible;
+                btnAdd8.Visibility = Visibility.Visible;
 
                 if (allRecords[7].DatColor == "Red")
                 {
@@ -454,6 +467,7 @@ namespace fashionApp2
             eclColour1.Fill = new SolidColorBrush(Colors.White);
             eclColour1.Stroke = new SolidColorBrush(Colors.White);
             rect1.Visibility = Visibility.Hidden;
+            btnAdd1.Visibility = Visibility.Hidden;
 
             lblItemName2.Content = "";
             lblItemCat2.Content = "  ";
@@ -462,6 +476,7 @@ namespace fashionApp2
             eclColour2.Fill = new SolidColorBrush(Colors.White);
             eclColour2.Stroke = new SolidColorBrush(Colors.White);
             rect2.Visibility = Visibility.Hidden;
+            btnAdd2.Visibility = Visibility.Hidden;
 
             lblItemName3.Content = "";
             lblItemCat3.Content = "  ";
@@ -470,6 +485,7 @@ namespace fashionApp2
             eclColour3.Fill = new SolidColorBrush(Colors.White);
             eclColour3.Stroke = new SolidColorBrush(Colors.White);
             rect3.Visibility = Visibility.Hidden;
+            btnAdd3.Visibility = Visibility.Hidden;
 
             lblItemName4.Content = "";
             lblItemCat4.Content = "  ";
@@ -478,6 +494,7 @@ namespace fashionApp2
             eclColour4.Fill = new SolidColorBrush(Colors.White);
             eclColour4.Stroke = new SolidColorBrush(Colors.White);
             rect4.Visibility = Visibility.Hidden;
+            btnAdd4.Visibility = Visibility.Hidden;
 
             lblItemName5.Content = "";
             lblItemCat5.Content = "  ";
@@ -486,6 +503,7 @@ namespace fashionApp2
             eclColour5.Fill = new SolidColorBrush(Colors.White);
             eclColour5.Stroke = new SolidColorBrush(Colors.White);
             rect5.Visibility = Visibility.Hidden;
+            btnAdd5.Visibility = Visibility.Hidden;
 
             lblItemName6.Content = "";
             lblItemCat6.Content = "  ";
@@ -494,6 +512,7 @@ namespace fashionApp2
             eclColour6.Fill = new SolidColorBrush(Colors.White);
             eclColour6.Stroke = new SolidColorBrush(Colors.White);
             rect6.Visibility = Visibility.Hidden;
+            btnAdd6.Visibility = Visibility.Hidden;
 
             lblItemName7.Content = "";
             lblItemCat7.Content = "  ";
@@ -502,6 +521,7 @@ namespace fashionApp2
             eclColour7.Fill = new SolidColorBrush(Colors.White);
             eclColour7.Stroke = new SolidColorBrush(Colors.White);
             rect7.Visibility = Visibility.Hidden;
+            btnAdd7.Visibility = Visibility.Hidden;
 
 
             lblItemName8.Content = "";
@@ -511,6 +531,7 @@ namespace fashionApp2
             eclColour8.Fill = new SolidColorBrush(Colors.White);
             eclColour8.Stroke = new SolidColorBrush(Colors.White);
             rect8.Visibility = Visibility.Hidden;
+            btnAdd8.Visibility = Visibility.Hidden;
         }
         //useless ATM
         private void fucking()
@@ -672,8 +693,6 @@ namespace fashionApp2
 
 
 
-
-
         private void ButtonReset_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine(comboStyle.Text);
@@ -719,6 +738,53 @@ namespace fashionApp2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnAdd1_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[0].DatItemID.ToString());
+        }
+
+        private void btnAdd2_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[1].DatItemID.ToString());
+        }
+        private void btnAdd3_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[2].DatItemID.ToString());
+        }
+        private void btnAdd4_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[3].DatItemID.ToString());
+        }
+
+        private void btnAdd5_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[4].DatItemID.ToString());
+        }
+
+        private void btnAdd6_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[5].DatItemID.ToString());
+        }
+
+        private void btnAdd7_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[6].DatItemID.ToString());
+        }
+
+        private void btnAdd8_Click(object sender, RoutedEventArgs e)
+        {
+            cart.Add(allRecords[7].DatItemID.ToString());
+
+            foreach (Object obj in cart)
+                System.Diagnostics.Debug.WriteLine("{0}", obj);
+        }
+
+        private void btnCart_Click(object sender, RoutedEventArgs e)
+        {
+            CartPage cartWindow = new CartPage();
+            cartWindow.Show();
         }
     }
 }

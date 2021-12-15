@@ -42,7 +42,7 @@
 
             <RadioButton FontSize="18" 
                          FontWeight="SemiBold"
-                         Name="radioCustomer">
+                         Name="radioCustomer" IsChecked="True">
                 Customer</RadioButton>
 
             <RadioButton FontSize="18" 

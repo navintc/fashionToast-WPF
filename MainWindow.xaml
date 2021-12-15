@@ -8,7 +8,7 @@
         Title="FashionToast Catalogue" Height="728" Width="1280"
         Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="newDG" HorizontalAlignment="Left" Height="257" Margin="23,420,0,0" VerticalAlignment="Top" Width="249"/>
+        <DataGrid x:Name="newDG" HorizontalAlignment="Left" Height="257" Margin="23,420,0,0" VerticalAlignment="Top" Width="249" Visibility="Hidden"/>
         <ScrollViewer x:Name="scrollBox1" HorizontalAlignment="Left" Height="621" Margin="298,67,0,0" VerticalAlignment="Top" Width="966">
             <Grid x:Name="DataGrid1" Height="627" Width="931">
                 <Grid.ColumnDefinitions>
@@ -22,7 +22,7 @@
                     <Image x:Name="imgFa1" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName1" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice1" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd1" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd1_Click"/>
                     <Label x:Name="lblItemCat1" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour1" Fill="Red" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -33,7 +33,7 @@
                     <Image x:Name="imgFa2" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName2" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice2" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd2" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd2_Click"/>
                     <Label x:Name="lblItemCat2" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -44,7 +44,7 @@
                     <Image x:Name="imgFa3" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName3" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice3" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd3" Content="+" Margin="177,249,15,0" VerticalAlignment="Top" Height="27" Click="btnAdd3_Click"/>
                     <Label x:Name="lblItemCat3" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -55,7 +55,7 @@
                     <Image x:Name="imgFa4" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName4" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice4" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd4" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd4_Click"/>
                     <Label x:Name="lblItemCat4" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -77,7 +77,7 @@
                     <Image x:Name="imgFa5" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName5" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice5" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd5" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd5_Click"/>
                     <Label x:Name="lblItemCat5" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -88,7 +88,7 @@
                     <Image x:Name="imgFa6" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName6" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice6" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd6" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd6_Click"/>
                     <Label x:Name="lblItemCat6" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -99,7 +99,7 @@
                     <Image x:Name="imgFa7" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName7" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice7" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd7" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd7_Click"/>
                     <Label x:Name="lblItemCat7" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -110,7 +110,7 @@
                     <Image x:Name="imgFa8" HorizontalAlignment="Left" Height="210" Margin="14,5,0,0" VerticalAlignment="Top" Width="194" Source="1001.jpg" Stretch="UniformToFill"/>
                     <Label x:Name="lblItemName8" Content="POLO Fayur" HorizontalAlignment="Left" Margin="20,214,0,0" VerticalAlignment="Top" Width="184" FontSize="16"/>
                     <Label x:Name="lblItemPrice8" Content="LKR. 5000" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top"/>
-                    <Button Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27"/>
+                    <Button x:Name="btnAdd8" Content="+" HorizontalAlignment="Left" Margin="177,249,0,0" VerticalAlignment="Top" Width="29" Height="27" Click="btnAdd8_Click"/>
                     <Label x:Name="lblItemCat8" Content="Mens | T-Shirt" HorizontalAlignment="Left" Margin="20,258,0,0" VerticalAlignment="Top" FontSize="10"/>
                     <Ellipse x:Name="eclColour8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="17" Margin="143,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
 
@@ -134,18 +134,18 @@
             <!--Rectangle Fill="#FFA5A5A5" Margin="10,22,10,211"/-->
 
             <Label Content="Size" HorizontalAlignment="Left" Margin="22,67,0,0" VerticalAlignment="Top" Width="59" FontSize="14"/>
-            
+
             <ComboBox x:Name="comboSize" HorizontalAlignment="Left" Margin="86,71,0,0" VerticalAlignment="Top" Width="187" SelectionChanged="ComboBox_SelectionChanged">
                 <ComboBoxItem Content="Small -S"/>
                 <ComboBoxItem Content="Medium -M"></ComboBoxItem>
                 <ComboBoxItem Content="Large -L" IsSelected="True"></ComboBoxItem>
                 <ComboBoxItem Content="Extral Large -XL"></ComboBoxItem>
             </ComboBox>
-            
+
             <Label Content="Colour" HorizontalAlignment="Left" Margin="22,101,0,0" VerticalAlignment="Top" Width="59" FontSize="14"/>
-            
+
             <Label Content="Style" HorizontalAlignment="Left" Margin="22,144,0,0" VerticalAlignment="Top" Width="59" FontSize="14"/>
-            
+
             <ComboBox x:Name="comboStyle" HorizontalAlignment="Left" Margin="86,148,0,0" VerticalAlignment="Top" Width="187">
                 <ComboBoxItem Content="Pants"></ComboBoxItem>
                 <ComboBoxItem Content="T-Shirt"></ComboBoxItem>
@@ -214,17 +214,9 @@
             <Rectangle x:Name="rectBla" Fill="White" HorizontalAlignment="Left" Height="4" Margin="217,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
             <Rectangle x:Name="rectWhi" Fill="White" HorizontalAlignment="Left" Height="4" Margin="247,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
         </Grid>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <Image Margin="8,6,1027.6,638.4" Source="logo.png" Stretch="Fill"/>
-        <Button x:Name="btnSignout" Content="Sign Out" HorizontalAlignment="Left" Margin="1176,26,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnSignout" Content="Sign Out" HorizontalAlignment="Left" Margin="1164,26,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="20,10,0,0" VerticalAlignment="Top" Width="206" Source="logo.png"/>
+        <Button x:Name="btnCart" Content="Cart" HorizontalAlignment="Left" Margin="1075,26,0,0" VerticalAlignment="Top" Width="70" Height="19" Click="btnCart_Click"/>
 
 
     </Grid>
