@@ -738,7 +738,9 @@ using System.Windows.Markup;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginScreen m = new LoginScreen();
+            this.Close();
+            m.Show();
         }
 
         private void btnAdd1_Click(object sender, RoutedEventArgs e)

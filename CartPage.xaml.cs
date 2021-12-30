@@ -59,7 +59,9 @@ namespace fashionApp2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            LoginScreen m = new LoginScreen();
+            this.Close();
+            m.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
