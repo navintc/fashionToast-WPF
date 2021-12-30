@@ -1,4 +1,5 @@
-﻿using System;
+﻿ 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,9 @@ using fashionApp2.Classes;
 using System.IO;
 using System.Xml;
 using System.Windows.Markup;
-using System.Collections;
 
-namespace fashionApp2
+
+ namespace fashionApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -42,7 +43,7 @@ namespace fashionApp2
     public partial class MainWindow : Window
     {
 
-        public ArrayList cart = new ArrayList();
+        
         public static SQLHolder[] allRecords = null;
 
 
@@ -742,48 +743,65 @@ namespace fashionApp2
 
         private void btnAdd1_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[0].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[0].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[0].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[0].DatPrice.ToString());
         }
 
         private void btnAdd2_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[1].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[1].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[1].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[1].DatPrice.ToString());
         }
         private void btnAdd3_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[2].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[2].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[2].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[2].DatPrice.ToString());
         }
         private void btnAdd4_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[3].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[3].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[3].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[3].DatPrice.ToString());
         }
 
         private void btnAdd5_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[4].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[4].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[4].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[4].DatPrice.ToString());
         }
 
         private void btnAdd6_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[5].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[5].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[5].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[5].DatPrice.ToString());
         }
 
         private void btnAdd7_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[6].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[6].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[6].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[6].DatPrice.ToString());
         }
 
         private void btnAdd8_Click(object sender, RoutedEventArgs e)
         {
-            cart.Add(allRecords[7].DatItemID.ToString());
+            FunkyDataInterface.cart.Add(allRecords[7].DatItemID.ToString());
+            FunkyDataInterface.cartNames.Add(allRecords[7].DatName.ToString());
+            FunkyDataInterface.pricesList.Add(allRecords[7].DatPrice.ToString());
 
-            foreach (Object obj in cart)
+            foreach (Object obj in FunkyDataInterface.cart)
                 System.Diagnostics.Debug.WriteLine("{0}", obj);
         }
 
         private void btnCart_Click(object sender, RoutedEventArgs e)
         {
             CartPage cartWindow = new CartPage();
+            this.Close();
             cartWindow.Show();
         }
     }

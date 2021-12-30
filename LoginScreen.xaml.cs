@@ -32,9 +32,11 @@ namespace fashionApp2
                 if (txtpw.Password == ("password") && txtUserName.Text == ("customer"))
                 {
                     MainWindow m = new MainWindow();
+                    this.Close();
                     m.Show();
+                    
 
-                }
+            }
                 else
                 {
                     MessageBox.Show("Password or username is incorrecr! Please try again!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);

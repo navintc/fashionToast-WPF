@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fashionApp2"
         mc:Ignorable="d"
-        Title="CartPage" Height="450" Width="800">
+        Title="CartPage" Height="728" Width="1280">
     <Grid>
-        
+        <ListBox x:Name="cartitems" HorizontalAlignment="Left" Height="429" Margin="58,190,0,0" VerticalAlignment="Top" Width="345"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="0,0,-0.4,0" Stroke="White" Width="1274" Height="62" VerticalAlignment="Top"/>
+        <Button x:Name="btnSignout" Content="Sign Out" HorizontalAlignment="Left" Margin="1164,26,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="20,10,0,0" VerticalAlignment="Top" Width="206" Source="logo.png"/>
+        <Label Content="Total Bill" HorizontalAlignment="Left" Margin="612,194,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Light" Width="222"/>
+        <Label x:Name="finalBill" Content="Rs. 500000 /=" HorizontalAlignment="Right" Margin="0,242,306.6,0" VerticalAlignment="Top" FontSize="36" Width="345"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="559" Margin="502,99,0,0" Stroke="White" VerticalAlignment="Top" Width="6"/>
+        <Label Content="By clicking Purchase , you agree to FashionToast Pvt. Ltd.'s Terms of Service and acknowledge that&#xD;&#xA;FashionToast Pvt. Ltd.'s Privacy Policy applies to you." HorizontalAlignment="Left" Margin="622,371,0,0" VerticalAlignment="Top"/>
+        <Image Margin="801,434,280.6,205.4" Source="credit_brands_01.png" Stretch="Fill"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="559" Margin="889,56,0,0" Stroke="White" VerticalAlignment="Top" Width="6" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label Content="Added Items" HorizontalAlignment="Left" Margin="58,127,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Light" Width="245"/>
+        <Button Content="Purchase" HorizontalAlignment="Left" Margin="817,521,0,0" VerticalAlignment="Top" Width="158" Click="Button_Click_1" Height="40"/>
+
     </Grid>
 </Window>

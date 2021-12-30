@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Collections;
+using fashionApp2.Classes;
+
 namespace fashionApp2
 {
     /// <summary>
@@ -19,14 +22,51 @@ namespace fashionApp2
     /// </summary>
     public partial class CartPage : Window
     {
+
+        double totalPrice = 0;
+
         public CartPage()
         {
             InitializeComponent();
+            
+            tesing();
+            
 
-            System.Diagnostics.Debug.WriteLine("-----------------------------------------------------"); 
-            MainWindow mw = new MainWindow();
-            foreach (Object obj in mw.cart)
+
+        }
+       
+        
+        public void tesing() {
+            System.Diagnostics.Debug.WriteLine("-----------------------------------------------------");
+
+            foreach (Object obj in FunkyDataInterface.cartNames)
+            {
                 System.Diagnostics.Debug.WriteLine("{0}", obj);
+                
+                cartitems.Items.Add(obj);
+                
+            }
+
+            foreach (Object obj in FunkyDataInterface.pricesList){
+
+                totalPrice = totalPrice + Convert.ToInt32(obj);
+                 
+            }
+
+
+            finalBill.Content =("Rs. " + totalPrice + " /=");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
+
+
 }
