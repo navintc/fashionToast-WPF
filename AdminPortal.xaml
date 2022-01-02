@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fashionApp2"
         mc:Ignorable="d"
-        Title="AdminPortal" Height="490" Width="800">
+        Title="AdminPortal" Height="728" Width="1280">
 
 
     <Grid>
@@ -14,66 +14,80 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Margin="0,0,-0.4,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180*"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="111*"/>
+            </Grid.RowDefinitions>
             <Line
-     X1="779" Y1="60"
+     X1="1280" Y1="60"
      X2="10" Y2="60"
      Stroke="Black"
-     StrokeThickness="4"/>
+     StrokeThickness="4" Margin="0,0,0,0.4" Grid.RowSpan="3"/>
             <Button Content="ADMIN ACCOUNT" Background="White" BorderThickness="2" BorderBrush="Orange" FontWeight="Bold"
-                 FontSize="16" HorizontalAlignment="Left" Margin="620,16,0,0" VerticalAlignment="Top" Width="150"/>
-        </Grid>
-        <Label Content="Item ID " HorizontalAlignment="Left"  Margin="38,113,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Item Name" HorizontalAlignment="Left" Margin="38,171,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="38,229,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Label Content="Quantity" HorizontalAlignment="Left" Margin="38,287,0,0" VerticalAlignment="Top" FontSize="20"/>
-
-        <TextBox HorizontalAlignment="Left"
-                 Height="30" 
-                 Margin="160,120,0,0" 
-                 TextWrapping="Wrap" 
-                 Name="txtItemID" 
-                 VerticalAlignment="Top" 
-                 Width="250"
-                 Background="White" BorderThickness="2" BorderBrush="Orange"
-                 FontSize="16"/>
-        <TextBox HorizontalAlignment="Left"
-                 Height="30" 
-                 Margin="160,178,0,0" 
-                 TextWrapping="Wrap" 
-                 Name="txtItemName"
-                 VerticalAlignment="Top" 
-                 Width="250"
-                 Background="White" BorderThickness="2" BorderBrush="Orange"
-                 FontSize="16"/>
-        <TextBox HorizontalAlignment="Left"
-                 Height="30" 
-                 Margin="160,236,0,0" 
-                 TextWrapping="Wrap" 
-                 Name="txtPrice" 
-                 VerticalAlignment="Top" 
-                 Width="250"
-                 Background="White" BorderThickness="2" BorderBrush="Orange"
-                 FontSize="16"/>
-        <TextBox HorizontalAlignment="Left"
-                 Height="30" 
-                 Margin="160,294,0,0" 
-                 TextWrapping="Wrap" 
-                 Name="txtQty"
-                 VerticalAlignment="Top" 
-                 Width="250"
-                 Background="White" BorderThickness="2" BorderBrush="Orange"
-                 FontSize="16"/>
-
-        <Button Content="ADD" FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="38,341,0,0" VerticalAlignment="Top" Width="90"/>
-        <Button Content="UPDATE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="185,341,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="1.801,1.393"/>
-        <Button Content="DELETE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="339,341,0,0" VerticalAlignment="Top" Width="100"/>
-
-
-        <Button Content="LOGOUT"  FontSize="20"  
+                 FontSize="16" HorizontalAlignment="Left" Margin="16,18,0,0" VerticalAlignment="Top" Width="150"/>
+            <Button Content="LOGOUT"  FontSize="20"  
               Foreground="White" FontWeight="ExtraBold"
                Background="Black"  HorizontalAlignment="Left" 
-                Margin="636,386,0,0" VerticalAlignment="Top" Width="120" Height="50"
-                RenderTransformOrigin="3.021,3.743"/>
+                Margin="1121,4,0,0" VerticalAlignment="Top" Width="120" Height="50"
+                RenderTransformOrigin="3.021,3.743"  Click="ButtonLogin_Click"/>
+            <Button Content="ADD" FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="457,115,0,0" VerticalAlignment="Top" Width="364" Grid.Row="1" Grid.RowSpan="2" Click="Button_Click"/>
+            <Button Content="UPDATE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="457,51,0,0" VerticalAlignment="Top" Width="364" RenderTransformOrigin="1.801,1.393" Grid.Row="2" Click="ButtonUpdate_Click"/>
+            <Button Content="DELETE"  FontWeight="Bold" FontSize="20" Background="#b9ef96" BorderBrush="Black" BorderThickness="2.5" HorizontalAlignment="Left" Margin="457,104,0,0" VerticalAlignment="Top" Width="364" Grid.Row="2" Click="ButtonDelete_Click"/>
+            <Label Content="Item ID " HorizontalAlignment="Left"  Margin="457,148,0,0" VerticalAlignment="Top" FontSize="20" Width="78"/>
+            <Label Content="Item Name" HorizontalAlignment="Left" Margin="457,206,0,0" VerticalAlignment="Top" FontSize="20" Width="114"/>
+            <Label Content="Price" HorizontalAlignment="Left" Margin="457,264,0,0" VerticalAlignment="Top" FontSize="20" Width="51"/>
+            <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="576,152,0,0" 
+                 TextWrapping="Wrap" 
+                 x:Name="txtItemID" 
+                 VerticalAlignment="Top" 
+                 Width="243"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+            <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="576,209,0,0" 
+                 TextWrapping="Wrap" 
+                 x:Name="txtItemName"
+                 VerticalAlignment="Top" 
+                 Width="243"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+            <TextBox HorizontalAlignment="Left"
+                 Height="30" 
+                 Margin="576,267,0,0" 
+                 TextWrapping="Wrap" 
+                 x:Name="txtPrice" 
+                 VerticalAlignment="Top" 
+                 Width="243"
+                 Background="White" BorderThickness="2" BorderBrush="Orange"
+                 FontSize="16"/>
+            <Label Content="Color" HorizontalAlignment="Left" Margin="457,316,0,0" VerticalAlignment="Top" FontSize="20" Width="114"/>
+            <ComboBox x:Name="comboColor" HorizontalAlignment="Left" Margin="576,322,0,0" VerticalAlignment="Top" Width="243" Height="23">
+                <ComboBoxItem Content="Red"/>
+                <ComboBoxItem Content="Green"/>
+                <ComboBoxItem Content="Blue"/>
+                <ComboBoxItem Content="Black"/>
+                <ComboBoxItem Content="White"/>
+                <ComboBoxItem Content="Yellow"/>
+            </ComboBox>
+            <Label Content="Style" HorizontalAlignment="Left" Margin="457,2,0,0" VerticalAlignment="Top" FontSize="20" Width="114" Grid.Row="1"/>
+            <ComboBox x:Name="comboStyle" HorizontalAlignment="Left" Margin="576,8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="243" Height="23">
+                <ComboBoxItem Content="T-Shirt"/>
+                <ComboBoxItem Content="Dress"/>
+                <ComboBoxItem Content="Shirt"/>
+                <ComboBoxItem Content="Dress"/>
+                <ComboBoxItem Content="Blouse"/>
+                <ComboBoxItem Content="Pants"/>
+            </ComboBox>
+            <Label Content="Gender" HorizontalAlignment="Left" Margin="457,44,0,0" VerticalAlignment="Top" FontSize="20" Width="114" Grid.Row="1"/>
+            <ComboBox x:Name="comboGender" HorizontalAlignment="Left" Margin="576,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="243" Height="23">
+                <ComboBoxItem Content="Men"/>
+                <ComboBoxItem Content="Women"/>
+            </ComboBox>
+        </Grid>
 
 
 

@@ -21,9 +21,9 @@
 
 
 
-
+    
     <Border Background="LightGray" CornerRadius="30" Margin="834,30,86,30">
-
+        
         <StackPanel Margin="24,40,28,40">
             <Label Content=" Login Details" 
                    Foreground="Black" 
@@ -49,6 +49,7 @@
                          FontWeight="SemiBold"
                          Name="radioAdmin">
                 Admin</RadioButton>
+            
 
             <Separator Margin="0,26,0,2"></Separator>
 

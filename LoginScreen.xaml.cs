@@ -36,15 +36,21 @@ namespace fashionApp2
                     m.Show();
                     
 
-            }
+                }
+                else if (txtpw.Password == ("password") && txtUserName.Text == ("admin"))
+                {
+                    AdminPortal n = new AdminPortal();
+                    this.Close();
+                    n.Show();
+                }
                 else
                 {
                     MessageBox.Show("Password or username is incorrecr! Please try again!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-            
 
-           
-            
+
+
+
         }
     }
 }
