@@ -48,7 +48,6 @@ namespace fashionApp2.Classes
             }
         }
 
-
         public static void closeConnection()
         {
             try

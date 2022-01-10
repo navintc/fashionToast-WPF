@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using fashionApp2.Classes;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace fashionApp2
 {
@@ -27,6 +28,14 @@ namespace fashionApp2
         public AdminPortal()
         {
             InitializeComponent();
+
+            //welcome toast
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Welcome Back Sir")
+            .AddText("Logged in as an admin. You are allowed to update item table")
+            .Show();
         }
 
 
@@ -92,17 +101,41 @@ namespace fashionApp2
         {
             sqlQueryADD();
 
+            
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Add new Entry")
+            .AddText("New entry successfully added into the item table.")
+            .Show();
+
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("UPDATE items SET [name]='" + txtItemName.Text + "',  [price]=" + txtPrice.Text + ", [color]='" + comboColor.Text + "',  [style]='" + comboStyle.Text + "', [gender]='" + comboGender.Text + "' WHERE [itemID]= '" + txtItemID.Text + "';");
             sqlQueryUPDATE();
+
+         
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Update Entry")
+            .AddText("Item table entry successfully updated.")
+            .Show();
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
             sqlQueryDELETE();
+            
+
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Delete Entry")
+            .AddText("Item table entry successfully deleted.")
+            .Show();
         }
     }
 }

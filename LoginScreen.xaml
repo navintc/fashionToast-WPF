@@ -20,65 +20,57 @@
 
 
 
+    <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,-0.4,0.4">
 
-    
-    <Border Background="LightGray" CornerRadius="30" Margin="834,30,86,30">
-        
-        <StackPanel Margin="24,40,28,40">
-            <Label Content=" Login Details" 
+
+
+        <Border Background="LightGray" CornerRadius="30" Margin="834,30,86,30">
+            <StackPanel Margin="24,40,28,40">
+                <Canvas Height="226" Margin="0,0,-144,0">
+                    <Rectangle Height="704" Width="444" Canvas.Top="-70" Fill="#add4e5"/>
+                    <Image Height="697" Source="j2.jpg" Stretch="Fill" Canvas.Left="-857" Canvas.Top="-70" Width="986"/>
+                    <Image Height="104" Source="logo.png" Stretch="Fill" Width="450" Canvas.Left="-69"/>
+
+                </Canvas>
+                <Label Content=" Login Details" 
                    Foreground="Black" 
                    FontSize="28" 
                    FontWeight="Bold" 
                    HorizontalAlignment="Left"/>
 
-            <Separator></Separator>
+                <Separator></Separator>
 
-            <Label Content="How would you like to login?" 
-                   FontSize="18" 
-                   
-                   FontWeight="SemiBold" Margin="0,69,0,0"/>
+                <Separator></Separator>
 
-            <Separator></Separator>
 
-            <RadioButton FontSize="18" 
-                         FontWeight="SemiBold"
-                         Name="radioCustomer" IsChecked="True">
-                Customer</RadioButton>
-
-            <RadioButton FontSize="18" 
-                         FontWeight="SemiBold"
-                         Name="radioAdmin">
-                Admin</RadioButton>
-            
-
-            <Separator Margin="0,26,0,2"></Separator>
+                <Separator Margin="0,26,0,2"></Separator>
 
 
 
-            <Label Content="Username"  
+                <Label Content="Username"  
                    HorizontalAlignment="Center" 
                    Foreground="Black"  
                    FontSize="18" 
                    FontWeight="SemiBold" Margin="0,0,-0.4,0" Width="302"/>
 
 
-            <TextBox x:Name="txtUserName" 
+                <TextBox x:Name="txtUserName" 
                      Background="White" 
                      MaxWidth="500" 
                      
                      FontSize="22" Text="customer"/>
-            <Label Content="Password" 
+                <Label Content="Password" 
                    Foreground="Black"  
                    FontSize="18" 
                    FontWeight="SemiBold" Margin="0,17,15.6,0"/>
 
-            <PasswordBox Name="txtpw" 
+                <PasswordBox Name="txtpw" 
                          
                          Background="White" 
                          MaxWidth="500" 
                           
                          FontSize="22" Password="password"/>
-            <Button Background=" #eeeeee" 
+                <Button Background=" #eeeeee" 
                     MaxHeight="70" 
                     MaxWidth="100" 
                     x:Name="btnLogin" 
@@ -91,8 +83,12 @@
 
 
 
-        </StackPanel>
 
+
+
+            </StackPanel>
+
+        </Border>
     </Border>
 
 

@@ -21,9 +21,9 @@ using fashionApp2.Classes;
 using System.IO;
 using System.Xml;
 using System.Windows.Markup;
+using Microsoft.Toolkit.Uwp.Notifications;
 
-
- namespace fashionApp2
+namespace fashionApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -62,7 +62,7 @@ using System.Windows.Markup;
 
             sqlQueryLord("");
 
-            fucking();
+            //welp();
 
         }
 
@@ -93,8 +93,15 @@ using System.Windows.Markup;
             {
                 var list = new List<SQLHolder>();
                 while (reader.Read())
-                    list.Add(new SQLHolder { DatItemID = reader.GetString(0), DatName = reader.GetString(1), DatPrice = reader.GetInt32(2),
-                        DatColor = reader.GetString(3), DatStyle = reader.GetString(4), DatGender = reader.GetString(5) });
+                    list.Add(new SQLHolder
+                    {
+                        DatItemID = reader.GetString(0),
+                        DatName = reader.GetString(1),
+                        DatPrice = reader.GetInt32(2),
+                        DatColor = reader.GetString(3),
+                        DatStyle = reader.GetString(4),
+                        DatGender = reader.GetString(5)
+                    });
                 allRecords = list.ToArray();
             }
 
@@ -108,9 +115,6 @@ using System.Windows.Markup;
         private void dataAssigner(SQLHolder[] allRecords)
         {
             //System.Diagnostics.Debug.WriteLine(allRecords[0].DatName);
-
-
-
 
             /*
             int recordsCount = 6;
@@ -135,7 +139,7 @@ using System.Windows.Markup;
 
 
 
-            // If දාලා කෑලි කඩහන් array එකේ size එක බලලා.. මුලින්ම ඔක්කොම අලු කරන්න function එක්කුත් දාන්න.
+            // Note for myself: If දාලා කෑලි කඩහන් array එකේ size එක බලලා.. මුලින්ම ඔක්කොම අලු කරන්න function එක්කුත් දාන්න.
 
 
             System.Windows.Controls.Image myImage = new System.Windows.Controls.Image();
@@ -535,7 +539,9 @@ using System.Windows.Markup;
             btnAdd8.Visibility = Visibility.Hidden;
         }
         //useless ATM
-        private void fucking()
+
+        /*
+        private void welp()
         {
             
             double[] marginA = { 2.4, 228.4 };
@@ -575,6 +581,7 @@ using System.Windows.Markup;
             }
         }
 
+        */
 
 
         private void rectColorChanger(string a)
@@ -748,6 +755,7 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[0].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[0].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[0].DatPrice.ToString());
+            toasties(allRecords[0].DatName.ToString());
         }
 
         private void btnAdd2_Click(object sender, RoutedEventArgs e)
@@ -755,18 +763,21 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[1].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[1].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[1].DatPrice.ToString());
+            toasties(allRecords[1].DatName.ToString());
         }
         private void btnAdd3_Click(object sender, RoutedEventArgs e)
         {
             FunkyDataInterface.cart.Add(allRecords[2].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[2].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[2].DatPrice.ToString());
+            toasties(allRecords[2].DatName.ToString());
         }
         private void btnAdd4_Click(object sender, RoutedEventArgs e)
         {
             FunkyDataInterface.cart.Add(allRecords[3].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[3].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[3].DatPrice.ToString());
+            toasties(allRecords[3].DatName.ToString());
         }
 
         private void btnAdd5_Click(object sender, RoutedEventArgs e)
@@ -774,6 +785,7 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[4].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[4].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[4].DatPrice.ToString());
+            toasties(allRecords[4].DatName.ToString());
         }
 
         private void btnAdd6_Click(object sender, RoutedEventArgs e)
@@ -781,6 +793,7 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[5].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[5].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[5].DatPrice.ToString());
+            toasties(allRecords[5].DatName.ToString());
         }
 
         private void btnAdd7_Click(object sender, RoutedEventArgs e)
@@ -788,6 +801,7 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[6].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[6].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[6].DatPrice.ToString());
+            toasties(allRecords[6].DatName.ToString());
         }
 
         private void btnAdd8_Click(object sender, RoutedEventArgs e)
@@ -795,6 +809,7 @@ using System.Windows.Markup;
             FunkyDataInterface.cart.Add(allRecords[7].DatItemID.ToString());
             FunkyDataInterface.cartNames.Add(allRecords[7].DatName.ToString());
             FunkyDataInterface.pricesList.Add(allRecords[7].DatPrice.ToString());
+            toasties(allRecords[7].DatName.ToString());
 
             foreach (Object obj in FunkyDataInterface.cart)
                 System.Diagnostics.Debug.WriteLine("{0}", obj);
@@ -805,6 +820,17 @@ using System.Windows.Markup;
             CartPage cartWindow = new CartPage();
             this.Close();
             cartWindow.Show();
+        }
+
+        private void toasties(string itemName)
+        {
+            //welcome toast
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Added " + itemName)
+            .AddText("Added new item to your FashionToast cart")
+            .Show();
         }
     }
 }
