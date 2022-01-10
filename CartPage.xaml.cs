@@ -68,6 +68,13 @@ namespace fashionApp2
         {
 
         }
+
+        private void goback_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Close();
+            m.Show();
+        }
     }
 
 

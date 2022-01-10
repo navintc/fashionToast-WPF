@@ -28,6 +28,7 @@
         </Rectangle>
         <Label Content="Added Items" HorizontalAlignment="Left" Margin="58,127,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Segoe UI Light" Width="245"/>
         <Button Content="Purchase" HorizontalAlignment="Left" Margin="817,521,0,0" VerticalAlignment="Top" Width="158" Click="Button_Click_1" Height="40"/>
+        <Button x:Name="goback" Content="Add More Items" HorizontalAlignment="Left" Margin="1035,26,0,0" VerticalAlignment="Top" Width="113" Click="goback_Click"/>
 
     </Grid>
 </Window>
