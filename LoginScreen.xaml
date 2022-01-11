@@ -26,13 +26,13 @@
 
         <Border Background="LightGray" CornerRadius="30" Margin="834,30,86,30">
             <StackPanel Margin="24,40,28,40">
-                <Canvas Height="226" Margin="0,0,-144,0">
+                <Canvas Height="120" Margin="0,0,-144,0">
                     <Rectangle Height="704" Width="444" Canvas.Top="-70" Fill="#add4e5"/>
                     <Image Height="697" Source="j2.jpg" Stretch="Fill" Canvas.Left="-857" Canvas.Top="-70" Width="986"/>
                     <Image Height="104" Source="logo.png" Stretch="Fill" Width="450" Canvas.Left="-69"/>
 
                 </Canvas>
-                <Label Content=" Login Details" 
+                <Label x:Name="lblt1" Content="Login Details" 
                    Foreground="Black" 
                    FontSize="28" 
                    FontWeight="Bold" 
@@ -47,7 +47,7 @@
 
 
 
-                <Label Content="Username"  
+                <Label x:Name="lblusername" Content="Username"  
                    HorizontalAlignment="Center" 
                    Foreground="Black"  
                    FontSize="18" 
@@ -59,7 +59,7 @@
                      MaxWidth="500" 
                      
                      FontSize="22" Text="customer"/>
-                <Label Content="Password" 
+                <Label x:Name="lblpassword" Content="Password" 
                    Foreground="Black"  
                    FontSize="18" 
                    FontWeight="SemiBold" Margin="0,17,15.6,0"/>
@@ -80,6 +80,8 @@
                     Content="Login" 
                     Margin="40 30"  
                     Foreground="Black"/>
+                
+                
 
 
 

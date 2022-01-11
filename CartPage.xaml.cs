@@ -30,8 +30,6 @@ namespace fashionApp2
             InitializeComponent();
             
             tesing();
-            
-
 
         }
        
@@ -66,7 +64,8 @@ namespace fashionApp2
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Purchase2 m = new Purchase2();
+            m.Show();
         }
 
         private void goback_Click(object sender, RoutedEventArgs e)

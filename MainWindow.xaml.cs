@@ -53,6 +53,27 @@ namespace fashionApp2
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //profile picture
+            Random rnd = new Random();
+            int num = rnd.Next();
+
+            
+            var image = new Image();
+            String randSEED = ("https://avatars.dicebear.com/api/adventurer-neutral/" + num + ".png");
+            var fullFilePath = @randSEED;
+
+
+
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(fullFilePath, UriKind.Absolute);
+            bitmap.EndInit();
+
+            image.Source = bitmap;
+            wrppp.Children.Add(image);
+
         }
 
 
@@ -831,6 +852,13 @@ namespace fashionApp2
             .AddText("Added " + itemName)
             .AddText("Added new item to your FashionToast cart")
             .Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FunkyDataInterface.cartNames.Clear();
+            FunkyDataInterface.cart.Clear();
+            FunkyDataInterface.pricesList.Clear();
         }
     }
 }
